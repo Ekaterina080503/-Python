@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from numbers import Number
-from Evklid_extended import egcd
+from Evklid_extended import egcd  # импортируем из прошлых работ функции :)
 
 
 class ModularTypeError(TypeError):
@@ -106,15 +106,32 @@ class Modular_Number(Number):
     def __bool__(self):
         return bool(self.number)
 
-    def multiply_module(self, a=1):
+    def multiply_module(self, a=1):  # умножим модуль числа на целое число
         if isinstance(a, int):
             self.modul *= a
         else:
             raise ModularTypeError("You can't multiply a module by a not-int number")
 
-    def reverse_number(self):
+    def reverse_number(self):  # Вернем обратный класс если можем
         d, x, y = egcd(self.number, self.modul)
         if d == 1:
             return Modular_Number(x, self.modul)
         else:
             raise IncorrectNumberModulusError("class and module are not mutually simple")
+
+
+a = Modular_Number(1, 5)  # проверка
+b = Modular_Number(8, 5)
+print(a, b)
+print(a + b)
+print(a - b)
+print(a + 1)
+print(1 - a)
+print(a * b)
+print(b ** 3)
+print(a.reverse_number())
+a.multiply_module(5)
+print(a)
+print(int(a))
+c = Modular_Number(6, 7)
+print(a + c)
