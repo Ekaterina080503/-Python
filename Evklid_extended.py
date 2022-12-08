@@ -10,8 +10,9 @@ def egcd(a, b):
     return (d, y - (b // a) * x, x)
 
 
-a = int(input())
-b = int(input())
-d, x, y = egcd(a, b)
-print(d, x, y)
-print(d == a * x + b * y)
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    d, x, y = egcd(a, b)
+    print(d, x, y)
+    print(d == a * x + b * y)
