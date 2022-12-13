@@ -32,7 +32,6 @@ class Fib:
         return Fib._Fib_iter()
 
 
-if __name__ == '__main__':
-    f = Fib()
-    for i in itertools.islice(f, 120):
-        print(i)
+f = Fib()
+for i in itertools.islice(f, 120):
+    print(i)
