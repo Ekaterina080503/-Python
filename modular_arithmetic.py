@@ -38,7 +38,7 @@ class Modular_Number(Number):
             else:
                 raise IncorrectNumberModulusError('the numbers must have the same modulus')
         else:
-            raise ModularDomainError("Can't say if Quaternion is equal to " + str(type(other)))
+            raise ModularDomainError("Can't say if Modular Number is equal to " + str(type(other)))
 
     def __ne__(self, other):
         return not self.__eq__(other)
@@ -53,7 +53,7 @@ class Modular_Number(Number):
             else:
                 raise IncorrectNumberModulusError('the numbers must have the same modulus')
         else:
-            raise ModularDomainError("Can't say if Quaternion is equal to " + str(type(other)))
+            raise ModularDomainError("Can't say if Modular Number is equal to " + str(type(other)))
 
     def __radd__(self, other):
         return self.__add__(other)
@@ -71,7 +71,7 @@ class Modular_Number(Number):
             else:
                 raise IncorrectNumberModulusError('the numbers must have the same modulus')
         else:
-            raise ModularDomainError("Can't say if Quaternion is equal to " + str(type(other)))
+            raise ModularDomainError("Can't say if Modular Number is equal to " + str(type(other)))
 
     def __rsub__(self, other):
         return self.__neg__().__add__(other)
@@ -86,7 +86,7 @@ class Modular_Number(Number):
             else:
                 raise IncorrectNumberModulusError('the numbers must have the same modulus')
         else:
-            raise ModularDomainError("Can't say if Quaternion is equal to " + str(type(other)))
+            raise ModularDomainError("Can't say if Modular Number is equal to " + str(type(other)))
 
     def __rmul__(self, other):
         return self.__mul__(other)
