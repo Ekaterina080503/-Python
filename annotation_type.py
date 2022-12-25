@@ -49,7 +49,7 @@ class Body:
 
 class Rocket(Body):
     @typechecked
-    def __init__(self, x: float, y: float, m0: float, dm: float, u: float, a: float):
+    def __init__(self, x: float, y: float, m0: float, dm: float, u: float, a: float) -> None:
         """
         Создать ракету.
 
