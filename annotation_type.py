@@ -10,8 +10,9 @@ MODEL_G = 9.81
 MODEL_DT = 0.001
 
 
+@typechecked
 class Body:
-    def __init__(self, x, y, vx, vy):
+    def __init__(self, x: float, y: float, vx: float, vy: float) -> None:
         """
         Создать тело.
 
@@ -35,7 +36,7 @@ class Body:
         self.trajectory_x = []
         self.trajectory_y = []
 
-    def advance(self):
+    def advance(self) -> None:
         """
         Выполнить шаг мат. модели применительно к телу, предварительно записав его координаты
         """
@@ -47,8 +48,8 @@ class Body:
         self.vy -= MODEL_G * MODEL_DT
 
 
+@typechecked
 class Rocket(Body):
-    @typechecked
     def __init__(self, x: float, y: float, m0: float, dm: float, u: float, a: float) -> None:
         """
         Создать ракету.
@@ -75,7 +76,7 @@ class Rocket(Body):
         self.u = u
         self.a = math.radians(a)
 
-    def advance(self):
+    def advance(self) -> None:
         self.trajectory_x.append(self.x)
         self.trajectory_y.append(self.y)
         if self.m > 0:
