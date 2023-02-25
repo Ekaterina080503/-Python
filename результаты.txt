@@ -1,0 +1,10 @@
+<class 'pure_python.Evklid'> 2 2.736137679987587
+<class 'pure_cython.Evklid'> 2 2.7036699600052088
+<class 'mypy_python.Evklid'> 2 2.6981412700144576
+<class 'numba.experimental.jitclass.base.Evklid'> 2 7.308832059986889
+переписала немного программу, при подсчете нод меняется b
+<class 'pure_python.Evklid'> 1 0.5103348099859432
+<class 'pure_cython.Evklid'> 1 0.49663891999516635
+<class 'mypy_python.Evklid'> 1 0.4920840800041333
+<class 'numba.experimental.jitclass.base.Evklid'> 1 0.5842746499925852
+numba медленнее всех
