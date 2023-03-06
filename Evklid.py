@@ -11,7 +11,8 @@ def gcd(a, b):
     return a
 
 
-a = int(input())
-b = int(input())
-print(gcd(a, b))
-print(math.gcd(a, b) == gcd(a, b))
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    print(gcd(a, b))
+    print(math.gcd(a, b) == gcd(a, b))

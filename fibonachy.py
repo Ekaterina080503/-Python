@@ -31,7 +31,14 @@ class Fib:
         """Создать и вернуть итератор"""
         return Fib._Fib_iter()
 
+    def finite_number(self, n):
+        for i in itertools.islice(self, n):
+            s = i
+        return s
 
-f = Fib()
-for i in itertools.islice(f, 120):
-    print(i)
+
+if __name__ == '__main__':
+    f = Fib()
+    print(f.finite_number(120))
+    for i in itertools.islice(f, 120):
+        print(i)
