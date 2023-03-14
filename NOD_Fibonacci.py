@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from Evklid import gcd
-from fibonachy import Fib
+from Fibonachy import Fib
 
 
 def nod_Fibonacci(n, m):
