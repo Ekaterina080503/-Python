@@ -24,4 +24,4 @@ def f(x):
 result = Monte_Karlo_integration(f, 0, 1, 100000)
 print(result)  # должно вывести значение приближенного интеграла
 v, err = integrate.quad(f, 0, 1)  # считаем интеграл с помощью библиотеки scipy
-print(abs(v-result))
+print(abs(v - result))  # погрешность метода Монте-Карло
