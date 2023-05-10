@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}Flask App{% endblock %}</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/contact">Контакты</a></li>
+        <li><a href="/what_is_name">Назовись</a></li>
+      </ul>
+    </nav>
+    {% block content %}{% endblock %}
+  </body>
+</html>

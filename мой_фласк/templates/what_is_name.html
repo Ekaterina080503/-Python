@@ -1,0 +1,17 @@
+{% extends 'header.html' %}
+
+{% block content %}
+    <p>Привет, {{Name}}!</p>
+
+    <p>Метод, который я использую: {{method}}</p>
+
+    <form action="/what_is_name" method="POST">
+      <input type="text" value="{{Name}}" name="Name" />
+      <input type="submit" value="Это мое имя!">
+    </form>
+
+    <form action="/what_is_name" method="POST">
+      <input type="text" value="{{Name}}" name="Name" />
+      <input type="submit" value="Как вас зовут?">
+    </form>
+{% endblock %}
